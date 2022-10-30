@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    margin: auto 20%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+    margin-top: 40px;
+}
+
+.akun {
+    width: 450px;
+    display: grid;
+    background: rgba(246, 246, 248, 1);
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 50px 200px 100px 100px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+        "num nama role edit";
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+a#backButton{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+.akun p:nth-child(1) {
+    background-color: white;
+    grid-area: num;
+    font-family: Baloo Bhai;
+    size: 15pt;
+}
+
+.akun p:nth-child(2) {
+    grid-area: nama;
+}
+
+.akun p:nth-child(3) {
+    grid-area: role;
+}
+
+a.edit {
+    grid-area: edit;
+    width: 50px;
+    padding: 5px;
+}
+
+
+
+#plus {
+
+    margin-bottom: auto;
+    height: fit-content;
+    width: 35px;
+
+}
+
+#kepala {
+    display: flex;
+}
+
+p {
+    font-family: Roboto;
+}
+
+.KotakTombolAdd {
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    background-color: black;
+    padding-top: 2px;
+}
+
+.KotakTombolAdd a {
+    color: white;
+    margin: 7px;
+
+}
+
+.KotakPlusAll {
+    display: flex;
+    width: 460px;
+    height: 20px;
+    justify-content: flex-end;
+    margin: 10px;
+
+}
+
+#backButton {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    padding: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.KotakEdit {
+    width: 50px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.KotakEdit a {
+    color: white;
+    font-family: Roboto;
+}
+
+.AkunAll {
+    background-color: rgba(245, 245, 247, 1);
+    width: 470px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Akun {
+    display: grid;
+    width: 450px;
+    margin: 10px;
+    padding-left: 25px;
+
+    align-items: center;
+    justify-items: left;
+    grid-template-columns: 50px 180px 120px;
+    grid-template-rows: 60px;
+    grid-template-areas:
+        "num nama role edit";
+    background-color: white;
+    border-radius: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-left: 1100px;
+}
+
+#iconAkun {
+    margin-right: 10px;
+}

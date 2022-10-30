@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="/admin-murid.css" />
+  <link rel="stylesheet" href="/navbar.css" />
+  <link rel="stylesheet" href="/date.css" />
+  <link rel="stylesheet" href="/pagination.css" />
+  <script src="/admin-murid.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="kiri">
+    <%- include('./navbar.ejs') %>
+  </div>
+  <div class="tengah">
+    <div class="main">
+      <h1>Data Murid</h1>
+      <div class="KotakAddAll">
+        <form action="/admin/murid" method="get">
+          Nama:
+          <input type="text" name="search" placeholder="Search" value="<%= search %>">
+          <input type="submit" value="Search">
+      </form>
+        <div id="kepala">
+          <a href="/admin/murid/tambah" id="plus">+</a>
+        </div>
+      </div>
+
+      <div class="muridAll">
+        <% for(const m of murid) { %>
+            <div class="murid">
+              <p><%= i %></p>
+              <p>
+                <i class="fa fa-user" aria-hidden="true" id="iconMurid"></i>
+                <%= m.nama %>
+              </p>
+              <p>
+                <i class="fa fa-address-card" aria-hidden="true" id="iconMurid"></i>
+                <%= m.NIS %>
+              </p>
+            </div>
+        <% i++ %>
+        <% } %>
+      </div>
+      <%- include('./pagination.ejs') %>
+        <div class="KotakBack">
+          <a class="back" href="/admin" id="backButton">Back</a>
+        </div>
+    </div>
+  </div>
+  <div class="kanan">
+    <%- include('./date.ejs') %>
+  </div>
+</body>
+
+</html>

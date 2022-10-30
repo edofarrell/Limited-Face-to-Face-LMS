@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/login.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="/login.js" defer></script>
+</head>
+
+<body>
+  <div id="bground"></div>
+  <header>
+    <div id="boxPTMT">
+      <i class="fa fa-graduation-cap fa-5x" aria-hidden="true" id="topi"></i>
+      <div id="boxTeks">
+        <div id="teksPTMT">PeTeEmTe</div>
+        <div id="SDsmarty">SD Smarty</div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="boxLogin">
+      <form action="/login" method="post">
+        <label for="username" id="username"><i class="fa fa-user" aria-hidden="true"
+            id="orang"></i>Username</label><br />
+        <input type="text" id="uname" name="username" required/><br />
+        <label for="password" id="password"><i class="fa fa-key" aria-hidden="true"
+            id="kunci"></i>Password</label><br />
+        <input type="password" id="pword" name="password" required/><br />
+        <input type="submit" id="loginButton" value="Log In" />
+        <p class="error">
+          <% if(error) { %>
+              <%= msg %>
+          <% } %>
+        </p>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

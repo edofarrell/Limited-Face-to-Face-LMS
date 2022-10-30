@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/admin-guru-edit.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="/admin-guru-edit.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div>Ubah Data Guru</div>
+  </header>
+  <main>
+    <div id="boxUbah">
+      <form action="/ubahGuru/change" method="post">
+        <label for="namaGuru" id="namaGuru"><i class="fa fa-user" aria-hidden="true" id="editGuru"></i>Nama
+          Guru</label><br />
+        <input type="text" id="nmGuru" name="nmGuru" value="<%= namaG %>" readonly /><br />
+        <label for="kelas" id="kelas"><i class="fa fa-building" aria-hidden="true" id="editGuru"></i>Kelas</label><br />
+        <select name="kls" id="kls" required>
+          <% for(const k of kelas) { %>
+            <option value="<%= k.nama %>" <% if(k.nama===namaKelas) { %>selected<% } %>><%= k.nama %></option>
+          <% } %>
+        </select>
+        <div id="buatButton">
+          <input type="submit" id="change" value="Change" />
+          <input type="submit" id="delete" value="Delete" />
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

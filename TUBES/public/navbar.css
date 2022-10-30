@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    width: 100px;
+    height: 550px;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 20px;
+    padding: 10px;
+}
+
+.navbar div {
+    color: white;
+}
+
+.home {
+    margin-top: 25px;
+}
+
+.changePW {
+    margin-top: 25px;
+}
+
+.logout {
+    margin-top: 320px;
+}
+
+span {
+    color: white;
+    font-family: Baloo Bhai;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.home,
+.changePW,
+.logout {
+    font-family: Roboto;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px;
+}

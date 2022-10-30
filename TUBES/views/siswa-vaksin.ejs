@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/siswa-vaksin.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Data Vaksin</h1>
+            <form action="/inputVaksin" method="post" enctype="multipart/form-data">
+                <p>Vaksin Ke</p>
+                <input type="number" class="dosisVaksin" name="dosis" max="3" required>
+                <p>Tanggal Vaksin</p>
+                <input type="date" class="tanggalVaksin" name="tanggal" required>
+                <p>Unggah Sertifikat</p>
+                <input type="file" class="sertifikat" name="bukti" required>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="KotakBack">
+                <a href="/siswa">Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

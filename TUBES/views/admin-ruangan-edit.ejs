@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/admin-ruangan-edit.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="/admin-ruangan-edit.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="teksPass">Ubah Ruangan</div>
+    </header>
+    <main>
+        <div id="boxUbah">
+            <form action="/ubahRuangan/change" method="post">
+                <label for="nomorRuangan" id="nomorRuangan"><i class="fa fa-thumb-tack" aria-hidden="true"
+                        id="location"></i>Kode Ruangan</label><br />
+                <input type="text" id="noR" name="kodeRuangan" readonly value="<%= kodeRuangan %>" /><br />
+                <label for="kapasitas" id="kapasitas"><i class="fa fa-user" aria-hidden="true"
+                        id="person"></i>Kapasitas</label><br />
+                <input type="text" id="kap" name="kapasitas" value="<%= kapasitas %>" required /><br />
+                <div id="buatButton">
+                    <input type="submit" id="change" value="Change" />
+                    <input type="submit" id="delete" value="Delete" />
+                </div>
+            
+                <p class="error">
+                    <% if(error) { %>
+                        Ruangan tidak bisa hapus karena digunakan oleh sebuah kelas
+                        <a class="back" href="/admin/ruangan" id="backButton">Back</a>
+                    <% } %>
+                </p>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+html {
+    background-color: white;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+    margin-top: 275px;
+}
+
+#boxNIS {
+    background: rgba(231, 231, 231, 1);
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    border-radius: 24px;
+}
+
+#masukNIS {
+
+    font-size: xx-large;
+    font-family: Baloo Bhai;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+}
+
+
+#mskNIS {
+    border-radius: 10px;
+    border: 0px;
+    height: 35px;
+    width: 250px;
+    background-color: #FFFFFF;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#cek {
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 22px;
+    font-family: Baloo Bhai;
+    border: 0px;
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.kanan {
+    grid-area: kanan;
+}
+
+#errorMSG {
+    font-family: Baloo Bhai;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: larger;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/guru-viewMurid.css" />
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/date.css">
+    <link rel="stylesheet" href="/pagination.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <div class="kelasNew">
+                <h2 class="tulisanKelas">Kelas</h2>
+                <div class="KotakKelas">
+                    <div class="KotakIkon">
+                        <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <p class="Kelas"><%= detilKelas[0].nama %></p>
+                    <p class="Ruangan"><i class="fa fa-thumb-tack" aria-hidden="true" id="iconGuruHome"></i><%= detilKelas[0].kodeRuangan %></p>
+                </div>
+            </div>
+            
+            <div class="periodeNew">
+                <h2 class="TulisanPeriode">Periode</h2>
+                <div class="KotakPeriode">
+                    <div class="KotakIkon">
+                        <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <p class="NamaPeriode"><%= detilPeriode[0].nama%></p>
+                    <p class="Tanggal"><i class="fa fa-calendar" aria-hidden="true"></i><%= detilPeriode[0].tanggalMulai.toLocaleDateString('id') %> - <%= detilPeriode[0].tanggalSelesai.toLocaleDateString('id') %></p>
+                    <p class="Percent"><i class="fa fa-percent" aria-hidden="true"></i><%= detilPeriode[0].persentaseKapasitas %></p>
+                </div>
+            </div>
+            
+    
+            <h1 class="TulisanDaftarMurid"> Daftar Murid</h1>
+            <% let i = 1 %>
+            <% for(const m of murid) { %>
+            <div class="DaftarMurid">
+                <p class="Nama"><i class="fa fa-user" aria-hidden="true"></i><%= m.nama %></p>
+                <p class="NIS">NIS</p>
+                <p class="NomorNIS"><%= m.NIS %></p>
+            </div>
+            <% i++ %>
+            <% } %>
+            <%- include('./pagination.ejs') %>
+            <div class="KotakBack">
+                <a href="/guru">Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

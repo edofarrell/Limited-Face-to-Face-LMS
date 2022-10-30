@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="/admin.css" />
+  <link rel="stylesheet" href="/navbar.css" />
+  <link rel="stylesheet" href="/welcomeBox.css" />
+  <link rel="stylesheet" href="/date.css" />
+  <title>Admin Home Page</title>
+</head>
+
+<body>
+  <div class="kiri">
+    <%- include('./navbar.ejs') %>
+  </div>
+  <div class="tengah">
+    <%- include('./welcomeBox.ejs') %>
+      <div class="main">
+        <h1 class="tulisanAturData">Atur Data</h1>
+        <div class="menu">
+          <div class="section ruangan">
+            <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+            <p>Ruangan</p>
+            <a href="/admin/ruangan">Manage</a>
+          </div>
+          <div class="section periode">
+            <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+            <p>Periode</p>
+            <a href="/admin/periode">Manage</a>
+          </div>
+          <div class="section murid">
+            <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+            <p>Murid</p>
+            <a href="/admin/murid">Manage</a>
+          </div>
+          <div class="section guru">
+            <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+            <p>Guru</p>
+            <a href="/admin/guru">Manage</a>
+          </div>
+          <div class="section akun">
+            <i class="fa fa-file-text fa-lg" aria-hidden="true"></i>
+            <p>Akun</p>
+            <a href="/admin/akun">Manage</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="kanan">
+    <%- include('./date.ejs') %>
+  </div>
+</body>
+
+</html>

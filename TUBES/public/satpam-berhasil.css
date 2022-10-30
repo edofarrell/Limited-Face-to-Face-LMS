@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: Baloo Bhai;
+}
+
+p {
+    font-family: Roboto;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+    padding-top: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.KotakDataSiswa {
+    background-color: rgba(245, 245, 247, 1);
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.KotakHasil {
+    background-color: rgba(245, 245, 247, 1);
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.KotakOK {
+    background-color: black;
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+}
+
+.kiri {
+    grid-area: kiri;
+}
+
+.tengah {
+    grid-area: tengah;
+}
+
+.kanan {
+    grid-area: kanan;
+}
+
+#check {
+    margin-right: 15px;
+}

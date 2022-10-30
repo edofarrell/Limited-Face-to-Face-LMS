@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/kepsek.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/welcomeBox.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+
+    <div class="tengah">
+        <%- include('./welcomeBox.ejs') %> 
+        <div class="main">
+            <h1>Laporan PTMT</h1>
+            <div class="KotakRekapitulasi">
+                <div class="KotakIkon">
+                    <i class="fa fa-file-text fa-2x" aria-hidden="true"></i>
+                </div>
+                <p>Rekapitulasi</p>
+                <div class="KotakView">
+                    <a href="/kepsek/rekap">View</a>
+                </div>
+            </div>
+            <div class="KotakGrafikTrend">
+                <div class="KotakIkon">
+                    <i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
+                </div>
+                <p>Grafik Trend</p>
+                <div class="KotakView">
+                    <a href="/kepsek/grafik">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

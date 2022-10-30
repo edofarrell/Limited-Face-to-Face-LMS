@@ -1,0 +1,27 @@
+h1{
+    font-family: Baloo Bhai;
+}
+p{
+    font-family: Roboto;
+}
+a{
+    font-family: Roboto;
+    color: white;
+    text-decoration: none;
+}
+#backButton{
+    background-color: black;
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#KotakKonfirmasi{
+    padding-top: 250px;
+    text-align: center;
+}

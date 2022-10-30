@@ -1,0 +1,125 @@
+html {
+    background: #FFFFFF;
+}
+
+header {
+    color: black;
+    font-family: Baloo Bhai;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+#boxAdd {
+    font-family: Montserrat;
+    background: rgba(231, 231, 231, 1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 430px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    border-radius: 24px;
+}
+
+form {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#uname {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#role1 {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#pword {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#change {
+    border-radius: 24px;
+    width: 150px;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 22px;
+    font-family: Montserrat;
+    border: 0px;
+    background-color: black;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 10px;
+}
+
+#delete {
+    border-radius: 24px;
+    width: 150px;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 22px;
+    font-family: Montserrat;
+    border: 0px;
+    background-color: black;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 10px;
+}
+
+#buatButton {
+    display: flex;
+}
+
+#editAcc {
+    margin-right: 20px;
+}
+
+#backButton {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: large;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+.error {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    font-size: medium;
+    text-align: center;
+}

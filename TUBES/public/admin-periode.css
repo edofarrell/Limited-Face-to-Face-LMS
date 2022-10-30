@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a#backButton {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+.periode {
+    display: grid;
+    align-items: center;
+    justify-items: left;
+    grid-template-columns: 50px 150px 240px 140px 100px 100px 100px;
+    grid-template-rows: 100px;
+    grid-template-areas:
+        "num nama tgl kap Kotaktatus edit print";
+    padding-left: 30px;
+}
+
+a {
+    color: white;
+}
+
+a.edit {
+    grid-area: edit;
+}
+
+a.print {
+    grid-area: print;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.KotakPlus {
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    background-color: black;
+    justify-items: center;
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+
+}
+
+form {
+    margin-right: 20px;
+    font-family: Roboto;
+}
+
+form select {
+    border-radius: 5px;
+    font-family: Roboto;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+form input {
+    font-family: Roboto;
+    margin-left: 5px;
+}
+
+.KotakPlusAll {
+    display: flex;
+    width: 800px;
+    height: 22px;
+    justify-content: flex-end;
+    margin: 5px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+
+.KotakPlus a {
+    padding-left: 7px;
+}
+
+.PeriodeAll {
+    background: rgba(245, 245, 247, 1);
+    border-radius: 15px;
+    width: 920px;
+    border-radius: 10px;
+}
+
+.KotakEdit {
+    display: flex;
+    width: 60px;
+    height: 55px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.KotakStatus {
+    display: flex;
+    font-family: Roboto;
+    grid-area: Kotaktatus;
+    width: 60px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.KotakPrint {
+    display: flex;
+    width: 80px;
+    height: 55px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#backButton {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    padding: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Nomor {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    grid-area: num;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.Nomor p {
+    font-family: Baloo Bhai;
+    font-size: 30px;
+}
+
+.Nama {
+
+    grid-area: nama;
+}
+
+.Tanggal {
+    grid-area: tgl;
+}
+
+.Persentase {
+    grid-area: kap;
+}
+
+.KotakStatus p {
+    font-family: Roboto;
+    color: black;
+}
+
+.KotakEdit a {
+    font-family: Roboto;
+}
+
+.KotakPrint a {
+    font-family: Roboto;
+    margin: 5px;
+
+}
+
+.Nama p {
+    font-family: Baloo Bhai;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+    margin-top: 40px;
+}
+
+.Tanggal p {
+    font-family: Roboto;
+}
+
+.Persentase p {
+    font-family: Roboto;
+}
+
+.KotakBack a {
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-left: 1100px;
+}
+
+#iconPeriodeHome {
+    margin-right: 15px;
+}

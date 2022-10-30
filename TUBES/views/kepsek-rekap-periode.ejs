@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/kepsek-rekap-periode.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <script src="/kepsek-rekap.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Rekapitulasi</h1>
+            <div class="KotakRekapitulasi">
+                <div class="KotakIkon">
+                    <i class="fa fa-exchange fa-2x" aria-hidden="true"></i>
+                </div>
+                <h5>Change By</h5>
+                <select class="Sort">
+                    <option value="Periode" selected="selected">Periode</option>
+                    <option value="Kelas">Kelas</option>
+                    <option value="Guru">Guru</option>
+                </select>
+                <a class="filter" href="/rekapPeriode" >Change</a>
+            </div>
+
+            <h1>Periode</h1>
+            <% for(const p of periode) { %>
+            <div class="KotakPeriode">
+                <div class="KotakIkon">
+                    <p><%= i %></p>
+                </div>
+                <p class="namaPeriode"><%= p.nama %></p>
+                <p class="tanggal"><i class="fa fa-calendar" aria-hidden="true"></i><%= p.tanggalMulai.toLocaleDateString('id') %> - <%= p.tanggalSelesai.toLocaleDateString('id') %></p>
+                <p class="persentase"><i class="fa fa-percent" aria-hidden="true"></i><%= p.persentaseKapasitas %></p>
+                <div class="detil">
+                    <p class="siswa">Siswa: <%= p.banyakSiswa %> Orang</p>
+                    <p class="guru">Guru: <%= p.banyakKelas %> Orang</p>
+                    <p class="total">Total: <%= p.banyakSiswa + p.banyakKelas %> Orang</p>
+                </div>
+            </div>
+            <% i++ %>
+            <% } %>
+            <%- include('./pagination.ejs') %>
+            <div class="KotakBack">
+                <a href="/kepsek">Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

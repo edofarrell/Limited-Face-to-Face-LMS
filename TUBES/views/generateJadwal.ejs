@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/generateJadwal.css" />
+    <title>Jadwal</title>
+</head>
+
+<body>
+    <div class="periode">
+        <p class="nama">
+            <%= periode.nama %>
+        </p>
+        <p class="tanggal">
+            <i class="fa fa-calendar" aria-hidden="true" id="iconPeriodeHome"></i>
+            <%= periode.tanggalMulai.toLocaleDateString('id') %> - <%= periode.tanggalSelesai.toLocaleDateString('id') %>
+        </p>
+        <p class="persentase">
+            <i class="fa fa-percent" aria-hidden="true" id="iconPeriodeHome"></i>
+            <%= periode.persentaseKapasitas %>
+        </p>
+    </div>
+    <div>
+        <table>
+            <tr class="namaKolom">
+                <th>Nama</th>
+                <th>Kelas</th>
+            </tr>
+            <% for(const s of siswa) { %>
+                <tr>
+                    <td class="siswa">
+                        <%= s.nama %>
+                    </td>
+                    <td class="kelas">
+                        <%= s.namaKelas %>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+    <div class="KotakBack">
+        <a class="back" href="/admin/periode">Back</a>
+    </div>
+</body>
+
+</html>

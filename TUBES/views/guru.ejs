@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/guru.css" />
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/welcomeBox.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <%- include('./welcomeBox.ejs') %>
+   
+        <div class="main">
+            <h1 class="tulisanKelas">Kelas</h1>
+            <div class="KotakKelas">
+                <div class="KotakIkon">
+                    <i class="fa fa-file-text fa-2x" aria-hidden="true"></i>
+                </div>
+                <p class="Kelas">
+                    <%= namaKelas %>
+                </p>
+                <p class="Ruangan">
+                    <i class="fa fa-thumb-tack" aria-hidden="true" id="iconGuruHome"></i>
+                    <%= kodeR %>
+                </p>
+            </div>
+    
+            <h1 class="tulisanPeriode">Periode</h1>
+            
+            
+            <div class="PeriodeAll">
+                <% for(const p of periode) { %>
+                <div class="Periode">
+                    
+                    <div class="KotakNomor">
+                        <p><%= i %></p>
+                    </div>
+                    
+                        <p class="NamaPeriode"><%= p.nama %></p>
+                        <p class="Tanggal"><i class="fa fa-calendar" aria-hidden="true"></i><%= p.tanggalMulai.toLocaleDateString('id') %> - <%= p.tanggalSelesai.toLocaleDateString('id') %></p>
+                        <p class="Percent"><i class="fa fa-percent" aria-hidden="true"></i><%= p.persentaseKapasitas %></p>
+                    
+                    <div class="KotakView">
+                        <a class="View" href="/guru/viewMurid/<%= p.idPeriode %>">View Students</a>
+                    </div>
+                </div>
+                <% i++ %>
+                <% } %>
+                
+            </div>
+            <%- include('./pagination.ejs') %>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

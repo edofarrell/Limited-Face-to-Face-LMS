@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    margin: auto 20%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+    margin-top: 40px;
+
+}
+
+.ruangan {
+    width: 350px;
+    display: grid;
+    background: rgba(246, 246, 248, 1);
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 50px 100px 100px 100px;
+    grid-template-rows: 1;
+    grid-template-areas:
+        "num noR kap edit";
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+a.edit {
+    grid-area: edit;
+    width: 50px;
+    padding: 5px;
+}
+
+.ruangan p:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    grid-area: num;
+    font-family: Baloo Bhai;
+    size: 15pt;
+    border-radius: 5px;
+    padding-top: 2px;
+}
+
+.ruangan p:nth-child(2) {
+    grid-area: noR;
+}
+
+.ruangan p:nth-child(3) {
+    grid-area: kap;
+}
+
+#backButton {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    padding: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plus {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    width: 35px;
+}
+
+#kepala {
+    display: flex;
+}
+
+p {
+    font-family: Roboto;
+}
+
+.KotakAddAll {
+    display: flex;
+    width: 310px;
+    height: 20px;
+    justify-content: flex-end;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-left: 1100px;
+}
+
+#iconRuangan {
+    margin-right: 10px;
+}

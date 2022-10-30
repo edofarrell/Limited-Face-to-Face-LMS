@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/admin-periode.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="/admin-periode.js" defer></script>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Data Periode</h1>
+            <div class="KotakPlusAll">
+                
+                <form action="/admin/periode" method="get">
+                    Status
+                    <select name="filter" id="">
+                        <option value="Semua" <% if(filter==='Semua') { %>selected<% } %>>Semua</option>
+                        <option value="Selesai" <% if(filter==='Selesai') { %>selected<% } %>>Selesai</option>
+                        <option value="Dibuka" <% if(filter==='Dibuka') { %>selected<% } %>>Dibuka</option>
+                        <option value="Belum Dibuka" <% if(filter==='Belum Dibuka') { %>selected<% } %>>Belum Dibuka</option>
+                    </select>
+                    <input type="submit" value="Filter">
+                </form>
+                <div class="KotakPlus">
+                    <a class="plus" href="/admin/periode/tambah">+</a>
+                </div>
+            </div>
+            <div class="PeriodeAll">
+                    <% for(const p of periode) { %>
+                        <div class="periode">
+                            <div class="Nomor">
+                                <p>
+                                    <%= i %>
+                                </p>
+                            </div>
+                            <div class="Nama">
+                                <p>
+                                    <%= p.nama %>
+                                </p>
+                            </div>
+                            <div class="Tanggal">
+                                <p>
+                                    <i class="fa fa-calendar" aria-hidden="true" id="iconPeriodeHome"></i>
+                                    <%= p.tanggalMulai.toLocaleDateString('id') %> - <%=
+                                            p.tanggalSelesai.toLocaleDateString('id') %>
+                                </p>
+                            </div>
+                            <div class="Persentase">
+                                <p>
+                                    <i class="fa fa-percent" aria-hidden="true" id="iconPeriodeHome"></i>
+                                    <%= p.persentaseKapasitas %>
+                                </p>
+                            </div>
+                            <div class="KotakStatus">
+                                <p class="status"><%= p.status %></p>
+                            </div>
+                            <div class="KotakEdit">
+                                <a class="edit"
+                                    href="/admin/periode/edit/<%= p.nama %>/<%= p.tanggalMulai.toLocaleDateString('fr-CA') %>/<%= p.tanggalSelesai.toLocaleDateString('fr-CA') %>/<%= p.persentaseKapasitas %>/<%= p.status %>">Edit</a>
+                            </div>
+                            <div class="KotakPrint">
+                                <a class="print" href="/admin/periode/print/<%= p.idPeriode %>">Generate Jadwal</a>
+                            </div>
+                        </div>
+                        <% i++ %>
+                            <% } %>
+            </div>
+            <%- include('./pagination.ejs') %>
+                <div class="KotakBack">
+                    <a class="back" id="backButton" href="/admin">Back</a>
+                </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/kepsek-rekap-guru.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <script src="/kepsek-rekap.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Rekapitulasi</h1>
+            <div class="KotakRekapitulasi">
+                <div class="KotakIkon">
+                    <i class="fa fa-exchange fa-2x" aria-hidden="true"></i>
+                </div>
+                <h5>Change By</h5>
+                <select class="Sort">
+                    <option value="Periode">Periode</option>
+                    <option value="Kelas">Kelas</option>
+                    <option value="Guru" selected="selected">Guru</option>
+                </select>
+                <a class="filter" href="/rekapPeriode">Change</a>
+            </div>
+
+            <h1>Guru</h1>
+            <% for(const g of guru) { %>
+            <div class="KotakPeriode">
+                <div class="KotakIkon">
+                    <p><%= i %></p>
+                </div>
+                <p class="namaGuru"><%= g.nama %></p>
+                <p class="namaKelas"><i class="fa fa-building" aria-hidden="true"></i><%= g.namaKelas %></p>
+                <div class="keterangan">
+                    <p>PTMT <%= g.counterKelas %> kali dari <%= g.counterPeriode %></p>
+                </div>
+            </div>
+            <% i++ %>
+            <% } %>
+            <%- include('./pagination.ejs') %>
+            <div class="KotakBack">
+                <a href="/kepsek">Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

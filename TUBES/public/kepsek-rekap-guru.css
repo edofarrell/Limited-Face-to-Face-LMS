@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h1,
+h5 {
+    font-family: Baloo Bhai;
+
+}
+
+p {
+    font-family: Roboto;
+}
+
+p i {
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.KotakRekapitulasi {
+
+    display: grid;
+    width: 420px;
+    height: 100px;
+    padding: 20px;
+    grid-template-columns: 70px 100px 100px 90px;
+
+    grid-template-areas:
+        "logo tulisan sort ok";
+    background: rgba(246, 246, 248, 1);
+    border-radius: 10px;
+}
+
+.filter {
+    grid-area: ok;
+    color: black;
+    margin: 20px;
+    padding-left: 40px;
+}
+
+h5 {
+    grid-area: tulisan;
+    margin-left: 20px;
+
+}
+
+.Sort {
+    grid-area: sort;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.KotakIkon {
+    grid-area: logo;
+    background: white;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.KotakIkon p {
+    font-family: Baloo Bhai;
+}
+
+.KotakPeriode {
+    background: rgba(246, 246, 248, 1);
+    display: grid;
+    width: 400px;
+    height: 150px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    grid-template-columns: 100px 200px 50px;
+    grid-template-areas:
+        "logo guru kelas"
+        "keterangan keterangan none";
+}
+
+.KotakPeriode .KotakIkon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.namaGuru {
+    grid-area: guru;
+    font-family: Baloo Bhai;
+}
+
+.namaKelas {
+    grid-area: kelas;
+    font-family: Roboto;
+}
+
+.keterangan {
+    grid-area: keterangan;
+
+    font-family: Roboto;
+}
+
+.keterangan p {
+    margin-left: 10px;
+}
+
+.KotakBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 130px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.KotakBack a {
+    color: white;
+    font-family: Roboto;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-left: 1100px;
+}

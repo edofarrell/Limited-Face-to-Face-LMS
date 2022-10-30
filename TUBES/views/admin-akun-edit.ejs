@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/admin-akun-edit.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="/admin-akun-edit.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div>Ubah Data Akun</div>
+  </header>
+  <main>
+    <div id="boxAdd">
+      <form action="/ubahAkun/change" method="post">
+        <label for="nama" id="nama"><i class="fa fa-user" aria-hidden="true" id="editAcc"></i>Nama</label><br />
+        <input type="text" id="uname" name="nama" value="<%= nama %>" readonly /><br />
+        <label for="username" id="username"><i class="fa fa-address-card" aria-hidden="true"
+            id="editAcc"></i>Username</label><br />
+        <input type="text" id="uname" name="uname" value="<%= username %>" required/><br />
+        <label for="role" id="role"><i class="fa fa-exclamation-circle" aria-hidden="true"
+            id="editAcc"></i>Role</label><br />
+        <select name="role1" id="role1" required>
+          <option value="Admin" <% if(role==='Admin' ) { %>selected<% } %>>Admin</option>
+          <option value="Guru" <% if(role==='Guru' ) { %>selected<% } %>>Guru</option>
+          <option value="Satpam" <% if(role==='Satpam' ) { %>selected<% } %>>Satpam</option>
+          <option value="Siswa" <% if(role==='Siswa' ) { %>selected<% } %>>Siswa</option>
+          <option value="Kepsek" <% if(role==='Kepsek' ) { %>selected<% } %>>Kepsek</option>
+        </select>
+        <label for="password" id="password"><i class="fa fa-key" aria-hidden="true"
+            id="editAcc"></i>Password</label><br />
+        <input type="text" id="pword" name="pword" required/><br />
+        <div id="buatButton">
+          <input type="submit" id="change" value="Change" />
+          <input type="submit" id="delete" value="Delete" />
+        </div>
+      </form>
+      <p class="error">
+        <% if(error) { %>
+          Username sudah dipakai akun lain
+          <a class="back" href="/admin/akun" id="backButton">Back</a>
+        <% } %>
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

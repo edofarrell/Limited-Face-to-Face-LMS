@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/admin-murid-add.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div>Tambah Data Murid</div>
+  </header>
+  <main>
+    <div id="boxFile">
+      <form action="/tambahMurid" method="post" enctype="multipart/form-data">
+        <i class="fa fa-file" aria-hidden="true" id="file"></i>
+        <input type="file" id="addFile" name="addFile" required/>
+        <input type="submit" id="add" value="Add" />
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

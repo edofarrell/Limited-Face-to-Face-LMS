@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/admin-akun-tambah.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="/admin-akun-tambah.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div>Tambah Data Akun</div>
+  </header>
+  <main>
+    <div id="boxAdd">
+      <form action="/tambahAkun" method="post">
+        <label for="nama" id="nama"><i class="fa fa-user" aria-hidden="true" id="addAcc"></i>Nama</label><br />
+        <input type="text" id="uname" name="nama" required/><br />
+        <label for="username" id="username"><i class="fa fa-address-card" aria-hidden="true"
+            id="addAcc"></i>Username</label><br />
+        <input type="text" id="uname" name="uname" required/><br />
+        <label for="role" id="role"><i class="fa fa-exclamation-circle" aria-hidden="true"
+            id="addAcc"></i>Role</label><br />
+        <select name="role1" id="role1" required>
+          <option value="Admin">Admin</option>
+          <option value="Guru" >Guru</option>
+          <option value="Satpam">Satpam</option>
+          <option value="Siswa">Siswa</option>
+          <option value="Kepsek">Kepsek</option>
+        </select>
+        <label for="password" id="password"><i class="fa fa-key" aria-hidden="true"
+            id="addAcc"></i>Password</label><br />
+        <input type="text" id="pword" name="pword" required/><br />
+        <input type="submit" id="add" value="Add" />
+      </form>
+      <p class="error">
+        <% if(error) { %>
+          Username sudah dipakai akun lain
+          <a class="back" href="/admin/akun" id="backButton">Back</a>
+        <% } %>
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

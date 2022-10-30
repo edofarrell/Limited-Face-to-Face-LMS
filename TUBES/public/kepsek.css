@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 230px;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+}
+
+a {
+    color: white;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+p {
+    font-family: Baloo Bhai;
+}
+
+.KotakRekapitulasi {
+    display: grid;
+    width: 330px;
+    height: 100px;
+    padding: 25px;
+    grid-template-columns: 70px 150px 60px;
+    grid-template-areas:
+        "logo rekapitulasi view";
+    background: rgba(246, 246, 248, 1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.KotakRekapitulasi p {
+    grid-area: rekapitulasi;
+    margin-left: 20px;
+}
+
+.KotakGrafikTrend {
+    display: grid;
+    width: 330px;
+    height: 100px;
+    padding: 25px;
+    grid-template-columns: 70px 150px 60px;
+    grid-template-areas:
+        "logo grafik view";
+    background: rgba(246, 246, 248, 1);
+    border-radius: 10px;
+}
+
+.KotakGrafikTrend p {
+    grid-area: grafik;
+    margin-left: 20px;
+}
+
+.KotakView {
+    grid-area: view;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 60px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.KotakIkon {
+    grid-area: logo;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+}

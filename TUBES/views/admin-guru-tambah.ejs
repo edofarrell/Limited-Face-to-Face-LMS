@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/admin-guru-tambah.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="/admin-guru-tambah.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div>Tambah Data Guru</div>
+  </header>
+  <main>
+    <div id="boxAdd">
+      <form action="/tambahGuru" method="post">
+        <label for="namaGuru" id="namaGuru"><i class="fa fa-user" aria-hidden="true" id="plusGuru"></i>Nama
+          Guru</label><br />
+        <input type="text" id="nmGuru" name="nmGuru" required/><br />
+        <label for="kelas" id="kelas"><i class="fa fa-building" aria-hidden="true" id="plusGuru"></i>Kelas</label><br />
+        <select name="kls" id="kls" required>
+          <% for(const k of kelas) { %>
+            <option value="<%= k.nama %>"><%= k.nama %></option>
+          <% } %>
+        </select>
+        <input type="submit" id="add" value="Add" />
+      </form>
+      <p class="error">
+        
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

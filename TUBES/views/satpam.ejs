@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/satpam.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/navbar.css" />
+  <link rel="stylesheet" href="/welcomeBox.css" />
+  <link rel="stylesheet" href="/date.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+  <div class="kiri">
+    <%- include('./navbar.ejs') %>
+  </div>
+  <div class="tengah">
+    <%- include('./welcomeBox.ejs') %>
+
+      <h1>Pemeriksaan Status PTMT</h1>
+
+      <main>
+        <div id="boxNIS">
+          <form action="/cekNIS" method="post">
+            <label for="masukNIS" id="masukNIS">Masukkan NIS</label><br />
+            <input type="text" id="mskNIS" name="nis" required /><br />
+            <input type="submit" id="cek" value="Cek Status" />
+          </form>
+          <% if(err) { %>
+            <p id="errorMSG">NIS tidak terdaftar</p>
+            <% } %>
+        </div>
+      </main>
+  </div>
+
+  <div class="kanan">
+    <%- include('./date.ejs') %>
+  </div>
+</body>
+
+</html>

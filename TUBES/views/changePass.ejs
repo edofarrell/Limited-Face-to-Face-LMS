@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/changePass.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="/changePass.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="teksPass">Change Password</div>
+    </header>
+    <main>
+        <div id="boxPass">
+            <form action="/changePassword" method="post">
+                <label for="oldPassword" id="oldPassword">Old Password</label><br />
+                <input type="password" id="oldpass" name="oldpass" required/><br />
+                <label for="newPassword" id="newPassword">New Password</label><br />
+                <input type="password" id="newpass" name="newpass" minlength="8" maxlength="12" required/><br />
+                <label for="confirmPassword" id="confirmPassword">Confirm New Password</label><br />
+                <input type="password" id="confirmpass" name="confirmpass" minlength="8" maxlength="12" required/><br />
+                <input type="submit" id="change" value="Change" />
+                <p class="error">
+                    <% if(err) { %>
+                        Old password didn't match
+                    <% } %>
+                </p>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/admin-guru.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Data Guru</h1>
+
+            <div class="KotakPlusAll">
+                <div class="KotakTombolAdd">
+                    <a href="/admin/guru/tambah" id="plus">+</a>
+                </div>
+            </div>
+
+            <div class="GuruAll">
+                    <% for(const g of guru) { %>
+                        <div class="guru">
+                            <p>
+                                <%= i %>
+                            </p>
+                            <p>
+                                <%= g.nama %>
+                            </p>
+                            <p>
+                                <i class="fa fa-building" aria-hidden="true" id="iconGuruHome"></i>Kelas: <%=
+                                    g.namaKelas %>
+                            </p>
+                            <p>
+                                <i class="fa fa-thumb-tack" aria-hidden="true" id="iconGuruHome"></i>Ruangan: <%=
+                                    g.kodeRuangan %>
+                            </p>
+                            <div class="KotakEdit">
+                                <a class="edit" href="/admin/guru/edit/<%= g.nama %>/<%= g.namaKelas %>">Edit</a>
+                            </div>
+                        </div>
+                        <% i++ %>
+                            <% } %>
+            </div>
+            <%- include('./pagination.ejs') %>
+                <div class="KotakBack">
+                    <a class="back" href="/admin" id="backButton">Back</a>
+                </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

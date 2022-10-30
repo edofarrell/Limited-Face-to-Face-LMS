@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    margin: auto 20%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.tulisanKelas {
+    margin-top: 25px;
+    margin-left: -135px;
+    grid-area: tulisanKelas;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+
+}
+
+h2 {
+    font-family: Baloo Bhai;
+
+}
+
+.Ruangan i {
+    margin-right: 10px;
+}
+
+.TulisanPeriode {
+    margin-top: 30px;
+    grid-area: tulisanPeriode;
+}
+
+.TulisanDaftarMurid {
+    margin-top: 60px;
+}
+
+.KotakKelas {
+    display: grid;
+    grid-area: kotakKelas;
+    margin-left: -130px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 210px;
+    height: 80px;
+    background: rgba(246, 246, 248, 1);
+    grid-template-columns: 40px 50px 80px;
+    grid-template-rows: 80px;
+    grid-template-areas:
+        "logo kelas ruangan";
+}
+
+.KotakIkon {
+    grid-area: logo;
+    background: white;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Kelas {
+    grid-area: kelas;
+    font-family: Baloo Bhai;
+}
+
+.Ruangan {
+    grid-area: ruangan;
+    font-family: Roboto;
+    margin-right: -30px;
+}
+
+
+
+.KotakPeriode {
+    display: grid;
+    grid-area: kotakPeriode;
+    margin-left: -15px;
+    width: 500px;
+    height: 85px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(246, 246, 248, 1);
+    grid-template-columns: 40px 150px 200px 70px;
+    grid-template-rows: 100px;
+    grid-template-areas:
+        "logo periode tanggal percent ";
+}
+
+
+
+.NamaPeriode {
+    grid-area: periode;
+    font-family: Baloo Bhai;
+}
+
+.Tanggal {
+    grid-area: tanggal;
+    font-family: Roboto;
+}
+
+.Tanggal i,
+.Percent i,
+.Nama i {
+    margin-right: 10px;
+}
+
+.Percent i {
+    margin-left: 20px;
+}
+
+.Percent {
+    grid-area: percent;
+    font-family: Roboto;
+}
+
+
+.DaftarMurid {
+    margin: 10px 0px;
+    background: rgba(246, 246, 248, 1);
+    display: grid;
+    border-radius: 10px;
+    width: 400px;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    grid-template-columns: 150px 100px 100px;
+    grid-template-rows: 80px;
+    grid-template-areas:
+        "nama nis nomor";
+}
+
+.Nama {
+    grid-area: nama;
+    font-family: Roboto;
+}
+
+.NIS {
+    grid-area: nis;
+    font-family: Baloo Bhai;
+    margin-left: 35px;
+}
+
+.NomorNIS {
+    grid-area: nomor;
+    font-family: Roboto;
+}
+
+.kelasNew {
+    display: grid;
+
+    grid-template-columns: 100px 325px;
+    margin-top: 70px;
+    grid-template-areas:
+        "tulisanKelas kotakKelas";
+}
+
+.periodeNew {
+    display: grid;
+    margin-left: 20px;
+    margin-top: 40px;
+    grid-template-columns: 120px 595px;
+    grid-template-areas:
+        "tulisanPeriode kotakPeriode";
+}
+
+.KotakBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 130px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.KotakBack a {
+    color: white;
+    font-family: Roboto;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-left: 1100px;
+}

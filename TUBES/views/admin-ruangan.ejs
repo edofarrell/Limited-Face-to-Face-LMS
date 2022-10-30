@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/admin-ruangan.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Data Ruangan</h1>
+            <div class="KotakAddAll">
+                <div id="kepala">
+                    <a href="/admin/ruangan/tambah" id="plus">+</a>
+                </div>
+            </div>
+            <% for(const r of ruangan) { %>
+            <div class="ruangan">
+                <p><%= i %></p>
+                <p>
+                    <i class="fa fa-thumb-tack" aria-hidden="true" id="iconRuangan"></i>
+                    <%= r.kodeRuangan %>
+                </p>
+                <p>
+                    <i class="fa fa-percent" aria-hidden="true" id="iconRuangan"></i>
+                    <%= r.kapasitas %>
+                </p>
+                <a class="edit" href="/admin/ruangan/edit/<%= r.kodeRuangan %>/<%= r.kapasitas %>">Edit</a>
+                </div>
+                <% i++ %>
+                <% } %>
+                <%- include('./pagination.ejs') %>
+                <a class="back" href="/admin" id="backButton">Back</a>
+            </div>
+        </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/siswa.css" />
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/welcomeBox.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <script src="/siswa.js" defer></script>
+    <link rel="stylesheet" href="/pagination.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <%- include('./welcomeBox.ejs') %> 
+    
+    <div class="main">
+        <div class="atas">
+            <div class="KotakDataVaksin">
+                <div class="KotakIkon">
+                    <i class="fa fa-file-text fa-2x" aria-hidden="true"></i>
+                </div>
+                <p>Data Vaksin</p>
+                <div class="KotakEdit">
+                    <a href="/siswa/vaksin">Edit</a>
+                </div>
+            </div>
+            <div class="KotakDaftarPeriode">
+                <div class="KotakIkon">
+                    <i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
+                </div>
+                <p>Daftar Periode</p>
+                <div class="KotakView">
+                    <a href="/siswa/periode">View</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        <% if(error!=='none') { %>
+        <div class="pesan">
+            <p class="error"><% if(error==='noVaksin') { %>Data vaksin belum dimasukkan<% } else if(error==='vaksinKurang') { %>Untuk mengikuti PTMT minimal telah vaksin dosis ke-2<% } %></p>
+        </div>
+        <% } %>
+
+        <h1>Periode PTMT</h1>
+        <% let i = 1 %>
+        <% for(const p of periode) { %>
+        <div class="Periode">
+            <div class="KotakNomor">
+                <p><%= i %></p>
+            </div>
+            <p class="namaPeriode"><%= p.nama %></p>
+            <p class="Tanggal"><i class="fa fa-calendar" aria-hidden="true"></i><%= p.tanggalMulai.toLocaleDateString('id') %> - <%= p.tanggalSelesai.toLocaleDateString('id') %></p>
+            <p class="Persentase"><i class="fa fa-percent" aria-hidden="true"></i><%= p.persentaseKapasitas %></p>
+        </div>
+        <% i++ %>
+        <% } %>
+        <%- include('./pagination.ejs') %>
+    </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

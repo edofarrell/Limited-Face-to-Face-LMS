@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/siswa-periode.css" />
+    <script src="/siswa-periode.js" defer></script>
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+    <link rel="stylesheet" href="/pagination.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Periode</h1>
+            <% for(const p of periode) { %>
+            <form action="/ubahStatus/<%= p.idPeriode %>/<%= p.jumlahSiswa %>/<%= Math.floor(kapasitas * (p.persentaseKapasitas*1.0/100)) %>" method="post" class="Periode">
+                <div class="KotakNomor">
+                    <p><%= i %></p>
+                </div>
+                <p class="namaPeriode"><%= p.nama %></p>
+                <p class="Tanggal"><i class="fa fa-calendar" aria-hidden="true"></i><%= p.tanggalMulai.toLocaleDateString('id') %> - <%= p.tanggalSelesai.toLocaleDateString('id') %></p>
+                <p class="Persentase"><i class="fa fa-percent" aria-hidden="true"></i><%= p.persentaseKapasitas %></p>
+                <p class="Tersedia"><i class="fa fa-user" aria-hidden="true"></i><%= p.jumlahSiswa %>/<%= Math.floor(kapasitas * (p.persentaseKapasitas*1.0/100)) %></p>
+                <div class="KotakStatus">
+                    <input type="text" class="status" name="status" value="<% if (status[i-1].idSiswa === null) { %>Tidak Bersedia<% } else { %>Bersedia<% } %>" readonly/>
+                </div>
+                <button class="KotakUbahStatus">Ubah Status</button>
+        </form>
+            <% i++ %>
+            <% } %>
+            <p class="error">
+                <% if(error) { %>
+                  Periode yang anda pilih sudah penuh
+                <% } %>
+            </p>
+            <%- include('./pagination.ejs') %>
+            <div class="KotakBack">
+                <a class="back" href="/siswa" id="backButton">Back</a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

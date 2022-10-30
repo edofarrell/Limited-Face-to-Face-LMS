@@ -1,0 +1,80 @@
+html {
+    background: #FFFFFF;
+}
+
+header {
+    color: black;
+    font-family: Baloo Bhai;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+#boxAdd {
+    font-family: Montserrat;
+    background: rgba(231, 231, 231, 1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 270px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    border-radius: 24px;
+}
+
+form {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#nmGuru {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#kls {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#add {
+    border-radius: 24px;
+    width: 150px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 22px;
+    font-family: Montserrat;
+    border: 0px;
+    background-color: black;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 5px;
+}
+
+#plusGuru {
+    margin-right: 20px;
+}
+
+.error {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    font-size: medium;
+    text-align: center;
+    font-family: Montserrat;
+}

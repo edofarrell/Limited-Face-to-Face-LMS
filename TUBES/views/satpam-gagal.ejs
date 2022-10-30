@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/satpam-gagal.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/date.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="kiri">
+        <%- include('./navbar.ejs') %>
+    </div>
+    <div class="tengah">
+        <div class="main">
+            <h1>Pemeriksaan Status PTMT</h1>
+            <div class="KotakDataSiswa">
+                <p>Nama : <%= nama %>
+                </p>
+                <p>NIS : <%= nis %>
+                </p>
+            </div>
+            <div class="KotakHasil">
+                <p>
+                    <i class="fa fa-times-circle fa-lg" aria-hidden="true" id="no"></i>Siswa Tidak Terdaftar
+                </p>
+                <div class="KotakOK">
+                    <a href="/satpam">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <%- include('./date.ejs') %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="/admin-periode-edit.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="/admin-periode-edit.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div>Ubah Periode</div>
+  </header>
+  <main>
+    <div id="boxAdd">
+      <form action="/ubahPeriode/change" method="post">
+        <label for="namaPeriode" id="namaPeriode"><i class="fa fa-file-text" aria-hidden="true" id="namaP"></i>Nama
+          Periode</label><br />
+        <input type="text" id="namPer" name="namaPer" value="<%= nama %>" readonly required /><br />
+        <label for="tanggalMulai" id="tanggalMulai"><i class="fa fa-calendar" aria-hidden="true"
+            id="tanggal"></i>Tanggal Mulai</label><br />
+        <input type="date" id="tglMulai" name="tglMulai" value="<%= mulai %>" required /><br />
+        <label for="tanggalSelesai" id="tanggalSelesai"><i class="fa fa-calendar" aria-hidden="true"
+            id="tanggal"></i>Tanggal Selesai</label><br />
+        <input type="date" id="tglSelesai" name="tglSelesai" value="<%= selesai %>" required /><br />
+        <label for="kapasitas" id="kapasitas"><i class="fa fa-percent" aria-hidden="true"
+            id="percent"></i>Kapasitas</label><br />
+        <input type="number" id="kap" name="kap" max="100" value="<%= kap %>" required /><br />
+        <label for="status" id="status"><i class="fa fa-check-square" aria-hidden="true"
+            id="status"></i>Status</label><br />
+        <select name="status" id="status" required>
+          <option value="Selesai">Selesai</option>
+          <option value="Dibuka" <% if(status==='Dibuka' ) { %> selected <% } %> >Dibuka</option>
+          <option value="Belum Dibuka" <% if(status==='Belum Dibuka' ) { %> selected <% } %>>Belum Dibuka</option>
+        </select>
+        <div id="buatButton">
+          <input type="submit" id="change" value="Change" />
+          <input type="submit" id="delete" value="Delete" />
+        </div>
+      </form>
+      
+      <p class="error">
+        <% if(error) { %>
+          Periode tidak bisa hapus karena masih terhubung dengan murid/kelas
+          <a class="back" href="/admin/periode" id="backButton">Back</a>
+        <% } %>
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

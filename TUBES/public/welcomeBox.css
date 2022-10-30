@@ -1,0 +1,39 @@
+.KotakWelcomeAll {
+    width: 563px;
+    border-radius: 20px;
+    height: 191px;
+    background: rgba(245, 245, 247, 1);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 55px;
+    left: 360px;
+    overflow: hidden;
+}
+
+.TulisanHelloPutra {
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 40px;
+    left: 32px;
+    font-family: Baloo Bhai;
+    font-weight: Regular;
+    font-size: 36px;
+    opacity: 1;
+    text-align: left;
+}
+
+.TulisanGoodToSee {
+    width: 120px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 90px;
+    left: 32px;
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+}

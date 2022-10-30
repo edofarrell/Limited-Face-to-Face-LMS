@@ -1,0 +1,32 @@
+h1 {
+    font-family: Baloo Bhai;
+}
+
+h4 {
+    font-family: Roboto;
+}
+
+.access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 170px;
+}
+
+.KotakBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 130px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.KotakBack a {
+    color: white;
+    font-family: Roboto;
+    text-decoration: none;
+}

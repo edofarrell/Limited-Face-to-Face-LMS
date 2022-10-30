@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Baloo Bhai;
+    margin-top: 80px;
+}
+
+a {
+    color: white;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.Periode {
+    display: grid;
+    background: rgba(246, 246, 248, 1);
+    border-radius: 10px;
+    width: 900px;
+    height: 100px;
+    margin-top: 20px;
+    grid-template-columns: 80px 120px 190px 120px 95px 160px 100px;
+    padding-top: 25px;
+    padding-left: 25px;
+    grid-template-areas:
+        "nomor periode tanggal persentase tersedia status ubah";
+}
+
+.KotakNomor {
+    grid-area: nomor;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.KotakNomor p {
+    font-family: Baloo Bhai;
+}
+
+.namaPeriode {
+    grid-area: periode;
+    font-family: Baloo Bhai;
+
+}
+
+.Tanggal {
+    grid-area: tanggal;
+    font-family: Roboto;
+}
+
+.Persentase {
+    grid-area: persentase;
+    font-family: Roboto;
+    margin-left: 35px;
+}
+
+.KotakStatus {
+    grid-area: status;
+    font-family: Roboto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+
+    border-radius: 5px;
+    text-align: center;
+}
+
+.Kelas {
+    grid-area: kelas;
+    font-family: Roboto;
+}
+
+.Tersedia {
+    grid-area: tersedia;
+    font-family: Roboto;
+    margin-right: 20px;
+}
+
+.KotakUbahStatus {
+    grid-area: ubah;
+    color: white;
+    display: flex;
+    background: black;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+input {
+    background-color: transparent;
+    width: 100px;
+    border: 0px;
+    font-size: 13px;
+    text-align: center;
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    grid-template-areas:
+        "kiri tengah kanan";
+
+}
+
+.kiri {
+    grid-area: kiri;
+    position: fixed;
+}
+
+.tengah {
+    grid-area: tengah;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanan {
+    grid-area: kanan;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-left: 1100px;
+}
+
+.KotakBack {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.error {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    font-size: medium;
+    text-align: center;
+    font-family: Montserrat;
+}

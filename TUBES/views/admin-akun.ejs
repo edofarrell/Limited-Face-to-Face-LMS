@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="/admin-akun.css" />
+  <link rel="stylesheet" href="/navbar.css" />
+  <link rel="stylesheet" href="/date.css" />
+  <link rel="stylesheet" href="/pagination.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="kiri">
+    <%- include('./navbar.ejs') %>
+  </div>
+  <div class="tengah">
+    <div class="main">
+      <div id="kepala">
+        <h1>Data Akun</h1>
+      </div>
+      <div class="KotakPlusAll">
+        <div class="KotakTombolAdd">
+          <a class="plus" href="/admin/akun/tambah" id="plus">+</a>
+        </div>
+      </div>
+
+      <div class="AkunAll">
+          <% for(const u of user) { %>
+            <div class="Akun">
+              <p>
+                <%= i %>
+              </p>
+              <p>
+                <i class="fa fa-user" aria-hidden="true" id="iconAkun"></i>
+                <%= u.nama %>
+              </p>
+              <p>
+                <i class="fa fa-exclamation-circle" aria-hidden="true" id="iconAkun"></i>
+                <%= u.role %>
+              </p>
+              <div class="KotakEdit">
+                <a class="edit" href="/admin/akun/edit/<%= u.nama %>/<%= u.role %>">Edit</a>
+              </div>
+            </div>
+
+            <% i++ %>
+              <% }%>
+      </div>
+      <%- include('./pagination.ejs') %>
+        <div class="KotakBack">
+          <a class="back" href="/admin" id="backButton">Back</a>
+        </div>
+    </div>
+  </div>
+  <div class="kanan">
+    <%- include('./date.ejs') %>
+  </div>
+</body>
+
+</html>

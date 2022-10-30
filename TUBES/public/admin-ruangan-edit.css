@@ -1,0 +1,118 @@
+html {
+    background: #FFFFFF;
+}
+
+header {
+    color: black;
+    font-family: Baloo Bhai;
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+}
+
+#boxUbah {
+    font-family: Montserrat;
+    background: rgba(231, 231, 231, 1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 285px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    border-radius: 24px;
+}
+
+form {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#noR {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#kap {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    width: 530px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#change {
+    border-radius: 24px;
+    width: 150px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 22px;
+    font-family: Montserrat;
+    border: 0px;
+    background-color: black;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#delete {
+    border-radius: 24px;
+    width: 150px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 22px;
+    font-family: Montserrat;
+    border: 0px;
+    background-color: black;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#buatButton {
+    display: flex;
+}
+
+#location {
+    margin-right: 20px;
+}
+
+#person {
+    margin-right: 20px;
+}
+
+#backButton {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: large;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+.error {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    font-size: large;
+    text-align: center;
+}
