@@ -12,12 +12,13 @@ Here are the five roles in the system and their features:
 4. Student: Logging in, updating vaccination status, selecting learning periods, and managing attendance preferences.
 5. Security: Checking student registration status for entry approval.
 
-> This is a final project for "Web Programming" and "Information Management and Database" course. The project was completed by a team of three people.
+> This is the final project for the "Web Programming" and "Information Management and Database" course. 
 
 ## Technologies
 HTML, CSS, JavaScript, NodeJS, ExpressJS, EJS, MySQL
 
 ## Contributor
+The project was completed by a team of three people: 
 - Edo Farrell Haryanto (https://github.com/edofarrell)
 - Neil Christopher (https://github.com/neilchristopher2002)
 - William Nehemia (https://github.com/WilliamNehem21)
