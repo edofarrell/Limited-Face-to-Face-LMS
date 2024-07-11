@@ -17,7 +17,7 @@ Here are the five roles in the system and their features:
 ## Technologies
 HTML, CSS, JavaScript, NodeJS, ExpressJS, EJS, MySQL
 
-## Contributor
+## Contributors
 The project was completed by a team of three people: 
 - Edo Farrell Haryanto (https://github.com/edofarrell)
 - Neil Christopher (https://github.com/neilchristopher2002)
